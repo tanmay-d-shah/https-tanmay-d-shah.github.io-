@@ -1,0 +1,63 @@
+---
+import Layout from "@layouts/Default.astro";
+import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro";
+import MobileSocials from "@components/home/MobileSocials.astro";
+import { Button } from "@eliancodes/brutal-ui";
+import { Card } from "@eliancodes/brutal-ui";
+---
+
+<Layout
+  title="Home"
+  pageTitle="Tanmay Shah | Home"
+  description="Portfolio and Blog of Tanmay Dineshkumar Shah."
+>
+  <main class="bg-pink p-6 flex-grow">
+    <MobileSocials />
+    <section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+      <h2 class="hidden">About Tanmay</h2>
+      <div class="col-span-8 md:col-span-5 lg:col-span-6">
+        <Card color="#facc15">
+          <div class="flex flex-col justify-between items-start gap-4">
+            <p class="mt-4 text-2xl md:text-3xl lg:text-4xl">
+              Product Engineer @ <a
+                class="text-black underline underline-blue"
+                target="_blank"
+                href="https://www.oslash.com/">OSlash</a
+              >
+            </p>
+            <p class="mt-2 outfit text-xl md:text-2xl lg:text-3xl">
+              Building Frontend, Enhancing Web Perf, Improving Product.
+            </p>
+            <Button
+              color="#34d399"
+              target={"_blank"}
+              href="https://drive.google.com/file/d/1j8XKspeXkwMf9L9FiT0E-WEXUsamuyva/view?usp=sharing"
+            >
+              Resume / CV &rarr;
+            </Button>
+          </div>
+        </Card>
+      </div>
+
+      <div class="col-span-8 md:col-span-3 lg:col-span-2">
+        <Card color="#4ade80">
+          <div class="flex flex-col">
+            <button
+              onclick="window.open('https://www.instagram.com/giddy_up_saddler/?hl=en', '_blank')"
+            >
+              <img
+                height="400"
+                width="400"
+                src="/tanmay_dp.jpeg"
+                class="object-cover h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+          </div>
+        </Card>
+      </div>
+    </section>
+    <RecentBlogPosts />
+  </main>
+</Layout>
